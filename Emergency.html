@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>災害情報ポータル</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 60px 20px 20px; /* ヘッダーがナビゲーションと重ならないように調整 */
+            text-align: center;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #b71c1c;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+        main {
+            padding: 100px 20px 20px; /* ヘッダーの高さに合わせて調整 */
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background: #ffffff;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        #emergency div {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #d32f2f;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>災害情報ポータル</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#emergency">緊急速報</a></li>
+            <li><a href="#shelters">避難所情報</a></li>
+            <li><a href="#support">支援情報</a></li>
+            <li><a href="#map">災害マップ</a></li>            
+            <li><a href="#typhoon">台風情報</a></li>
+            <li><a href="#weather">週間天気情報</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="emergency">
+            <br><br>
+            <h2 style="color: #b71c1c;">緊急速報</h2>
+            <div>
+                <p>2025/08/04　08:15　　避難所の<a href="#support">物資</a>が不足しています！！</p>
+                <p>2025/08/03　18:20　　<a href="#map">災害マップ</a>を更新しました</p>
+                <p>2025/08/03　15:00　　<a href="#shelters">避難所情報</a>を更新しました</p>
+                <p>2025/08/03　12:20　　<a href="#map">災害マップ</a>を更新しました</p>
+                <p>2025/08/03　06:40　　暴風警報が発令されました</p>
+                <p>2025/08/02　15:00　　ちむぐくる館に<a href="#shelters">避難所</a>を開設しました</p>
+                <p>2025/08/02　15:00　　暴風注意報が発令されました</p>
+                <p>2025/08/02　06:30　　<a href="#typhoon">台風第５号</a>が発生しました</p>
+            </div>
+        </section>
+        <section id="shelters">
+          <br><br>
+          <h2>避難所情報</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>避難所名</th>
+                  <th>住所</th>
+                  <th>避難者数</th>
+                  <th>収容人数</th>
+                  <th>備　考</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ちむぐくる館</td>
+                  <td>宮平６９７番地１０<a href="https://maps.app.goo.gl/xLr2PY4LH9a7Tg546">[地図]</a></td>
+                  <td>25名</td>
+                  <td>50名</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>南風原町役場</td>
+                  <td>兼城６８６<a href="https://maps.app.goo.gl/VbEqRqwjEgKkcaW18">[地図]</a></td>
+                  <td>12名</td>
+                  <td>30名</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+                <ul>
+                  <li>避難所の収容人数は、避難所の広さや設備によって異なります。収容人数は目安です。</li>
+                  <li>避難所には、飲料水や食料、毛布、マスクなどの備蓄があります。</li>
+                  <li>避難所には、安全を確保できるうちに移動してください。</li>                  
+                </ul>
+            </div>
+          </section>
+        <section id="support">
+          <br><br>
+          <h2>支援情報</h2>
+          <p>南風原町では、以下の物資を必要としています。ご協力をお願いいたします。</p>
+          <p>物資の提供を希望される方は、南風原町総務部総務課（TEL：098-889-4415）までご連絡ください。</p>
+          <p>※状況は変動する可能性があります。</p>     
+          <br>
+          <table>
+            <thead>
+              <tr>
+                <th>物資名</th>
+                <th>状　況</th>
+                <th>必要数</th>
+                <th>残　数</th>
+                <th>備　考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>飲料水</td>
+                <td>余裕</td>
+                <td>25Ｌ/日</td>
+                <td>500Ｌ</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>食料品</td>
+                <td>残りわずか</td>
+                <td>30食/日</td>
+                <td>90食</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>毛布</td>
+                <td>余裕</td>
+                <td>50枚</td>
+                <td>50枚</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>マスク</td>
+                <td>不足</td>
+                <td>100枚</td>
+                <td>20枚</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>衣類</td>
+                <td>不足</td>
+                <td>10着</td>
+                <td>5着</td>
+                <td></td> 
+              </tr>
+              <tr>
+                <td>トイレットペーパー</td>
+                <td>不足</td>
+                <td>100個</td>
+                <td>50個</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>消毒液</td>
+                <td>不足</td>
+                <td>10本</td>
+                <td>5本</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="map">
+          <br><br>
+            <h2>災害マップ</h2>
+            <div id="map-container">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1xbSIpvbz9yroa9NFgKc9atCxxrhPij0&ehbc=2E312F" width="960" height="840"></iframe>
+               <a href="#" target="_blank">
+                    Logoフォームで災害を通報する
+                </a>
+            </div>
+        </section>
+
+        <section id="typhoon">
+            <br><br>
+            <h2>台風情報</h2>
+            <p>
+              <iframe src="https://www.jma.go.jp/bosai/map.html#7/27.377/129.276/&elem=typhoon_all&typhoon=all&contents=typhoon" width="960" height="600"></iframe>
+                <a href="https://www.jma.go.jp/bosai/map.html#7/27.377/129.276/&elem=typhoon_all&typhoon=all&contents=typhoon" target="_blank">
+                    気象庁 台風情報を見る
+                </a>
+            </p>
+        </section>
+
+        <section id="weather">
+          <br><br>
+          <h2>週間天気情報</h2>
+          <p>
+            <iframe src="https://www.jma.go.jp/bosai/#pattern=forecast&area_type=class20s&area_code=4735000" width="960" height="600"></iframe>
+              <a href="https://www.jma.go.jp/bosai/#pattern=forecast&area_type=class20s&area_code=4735000 target="_blank">
+                  気象庁 週間天気を見る
+              </a>
+          </p>
+      </section>
+
+    </main>
+    <footer>
+        <p>お問い合わせ:  南風原町総務部総務課　TEL098-889-4415</p>
+    </footer>
+</body>
+</html>
